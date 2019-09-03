@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="./css/component.css" />
+    <link rel="stylesheet" type="text/css" href="./css/cs-select.css" />
+    <link rel="stylesheet" type="text/css" href="./css/cs-skin-boxes.css" />
+    <!-- Custom styles for this template -->
+    <link href="main.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <script src="js/modernizr.custom.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><img alt="Brand" src="./images/dc.png" height="30px" width="30px"></a>
+      <a class="navbar-brand" href="index.html">De-Confianza</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#">link<span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<br>
+<div class="container">
+      <div class="fs-form-wrap" id="fs-form-wrap">
+        <div class="fs-title"><h1>Supplier &amp; Customer Register</h1></div>
+        <form id="myform" class="fs-form fs-form-full" autocomplete="off">
+          <ol class="fs-fields">
+            <li>
+              <label class="fs-field-label fs-anim-upper" for="q1">Name <sup style="color:red">*</sup></label>
+              <input class="fs-anim-lower" id="q1" name="name" type="text" required/>
+            </li>
+            <li>
+              <label class="fs-field-label fs-anim-upper" for="q2" data-info="We won't send you spam, we promise...">Contact <sup style="color:red">*</sup></label>
+              <input class="fs-anim-lower" id="q2" name="contact" type="number" required/>
+            </li>
+            <li>
+              <label class="fs-field-label fs-anim-upper" for="q3" data-info="We won't send you spam, we promise...">Email <sup style="color:red">*</sup></label>
+              <input class="fs-anim-lower" id="q3" name="email" type="email" pattern="[a-zA-Z0-9!#$%&amp;'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*" required/>
+            </li>
+            <li>
+              <label class="fs-field-label fs-anim-upper" for="q4">Username <sup style="color:red">*</sup></label>
+              <input class="fs-anim-lower" id="q4" name="username" type="text" required/>
+            </li>
+            <li>
+              <label class="fs-field-label fs-anim-upper" for="q5">Password <sup style="color:red">*</sup></label>
+              <input class="fs-anim-lower" id="q5" name="password" type="password" required/>
+            </li>
+            <li>
+              <label class="fs-field-label fs-anim-upper" for="q6">Confirm Password <sup style="color:red">*</sup></label>
+              <input class="fs-anim-lower" id="q6" name="con-password" type="password" required/>
+            </li>
+            <li data-input-trigger>
+              <label class="fs-field-label fs-anim-upper" for="q7" data-info="This will help us provide special services to our customers">Gender <sup style="color:red">*</sup></label>
+              <div class="fs-radio-group fs-radio-custom clearfix fs-anim-lower">
+                <span><input id="q7a" name="gender" type="radio" value="1"/><label for="q7a" class="radio-1s"></label></span>
+                <span><input id="q7b" name="gender" type="radio" value="2"/><label for="q7b" class="radio-2s"></label></span>
+              </div>
+            </li>
+            <li>
+              <label class="fs-field-label fs-anim-upper" for="q8" data-info="This will help us provide special services to our customers">Country <sup style="color:red">*</sup></label>
+              <input class="fs-anim-lower" id="q8" name="country" type="text" required/>
+            </li>
+          </ol><!-- /fs-fields -->
+          <button class="fs-submit" type="submit">Send answers</button>
+        </form><!-- /fs-form -->
+      </div><!-- /fs-form-wrap -->
+    </div><!-- /container -->
+    <script src="js/classie.js"></script>
+    <script src="js/selectFx.js"></script>
+    <script src="js/fullscreenForm.js"></script>
+    <script>
+      (function() {
+        var formWrap = document.getElementById( 'fs-form-wrap' );
+
+        [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {  
+          new SelectFx( el, {
+            stickyPlaceholder: false,
+            onChange: function(val){
+              document.querySelector('span.cs-placeholder').style.backgroundColor = val;
+            }
+          });
+        } );
+
+        new FForm( formWrap, {
+          onReview : function() {
+            classie.add( document.body, 'overview' ); // for demo purposes only
+          }
+        } );
+      });
+    </script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/main.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
+	<script src="js/imagesloaded.js"></script>
+    <script src="js/classie.js"></script>
+	<script src="js/AnimOnScroll.js"></script>
+<!-- 	<script>
+		new AnimOnScroll( document.getElementById( 'grid' ), {
+			minDuration : 0.4,
+			maxDuration : 0.7,
+			viewportFactor : 0.2
+		} );
+	</script> -->
+  </body>
+</html>

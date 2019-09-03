@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Add item</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,900" rel="stylesheet">
+      <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container" id="app">
+  <div class="add-product" :class="{'open': formOpen}">
+    <div class="button-copy" v-show="!formOpen" @click="formOpen = true">Add Product</div>
+    <form @submit="cancel()">
+
+      <div class="form--field">
+        <label>Product Category <sup style="color: red;">*</sup></label>
+        <input type="text" class="form--element" name="category" v-model="productData.title" placeholder="Category" required="">
+      </div>
+      <div class="form--field">
+        <label>Product Name <sup style="color: red;">*</sup></label>
+        <input type="text" class="form--element" name="name" v-model="productData.title" placeholder="Name" required="">
+      </div>
+      <div class="form--field">
+        <label>Product Description</label>
+        <textarea class="form--element textarea" v-model="productData.description" placeholder="Description">                                
+        </textarea>
+      </div>
+      <div class="form--container -inline">
+        <div class="form--field -short">
+          <label>Product Quality1 *</label>
+          <input type="text" class="form--element" name="rating" v-model="productData.title" placeholder="quality" required="">
+        </div>
+        <div class="form--field -short">
+          <label>Product Quality2 *</label>
+          <span class="form--price">$</span>
+          <input type="text" class="form--element" name="price" v-model="productData.title" placeholder="quality2" required="">
+        </div>
+        <div class="form--field -short">
+          <label>Product Quality3 *</label>
+          <span class="form--price">$</span>
+          <input type="text" class="form--element" name="list_price" v-model="productData.list_price" placeholder="List Price" required="" min="0" max="500" pattern="\d+(\.\d{2})?">
+        </div>
+      </div>
+      <div class="form--field">
+        <label class="emoji">
+          Is Featured
+          <input type="checkbox" name="is_featured" v-bind="productData.is_featured">
+          <span></span>
+        </label>
+        <p class="featured-note">If Is Featured is selected the product will appear in a large card.</p>
+      </div>
+      <div class="form--field">
+        <label>Product Description</label>
+        <textarea class="form--element textarea" v-model="productData.description" placeholder="Description">                                
+        </textarea>
+      </div>
+
+      <button type="submit" class="submit-button">Add Product</button>
+      <div class="cancel"><span @click="cancel()">Cancel</span></div>
+    </form>
+  </div>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
